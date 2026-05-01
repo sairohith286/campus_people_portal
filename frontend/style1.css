@@ -1,0 +1,489 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.topbar {
+    background-color: #1a2f57;
+    height: 45px;
+    display: flex;
+    justify-content: space-between; /* pushes content to edges */
+    align-items: center;
+    padding: 0 40px;
+}
+
+.topbar-left {
+    flex: 1;
+}
+
+.topbar-right {
+    display: flex;
+    justify-content: flex-end;
+}
+
+.support-btn {
+    background-color: #2ecc71;
+    color: white;
+    padding: 6px 14px;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 3px;
+}
+
+
+.support-btn {
+    background-color: #2ecc71;
+    border: none;
+    padding: 6px 12px;
+    color: white;
+    cursor: pointer;
+    font-weight: bold;
+    border-radius: 2px;
+}
+
+/* Logo bar */
+.logo-bar {
+    display: flex;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #ddd;
+}
+
+.logo-bar img {
+    width: 80px;
+    margin-right: 20px;
+}
+
+.logo-text h2 {
+    font-size: 20px;
+    color: #1a2f57;
+}
+
+.logo-text p {
+    font-size: 14px;
+    color: #555;
+}
+
+/* Navbar */
+.nav-wrapper {
+    width: 100%;
+    border-top: 1px solid #eee;
+    border-bottom: 1px solid #eee;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between; /* spread items */
+    width: 70%;                     /* ✅ at least 70% */
+    margin-left: 40px;              /* align like screenshot */
+    padding: 12px 0;
+}
+
+.navbar a {
+    text-decoration: none;
+    color: #1a2f57;
+    font-weight: 600;
+    font-size: 15px;
+    white-space: nowrap;
+}
+
+.navbar a.active {
+    color: #2ecc71;
+}
+
+.navbar a:hover {
+    color: #2ecc71;
+}
+/* QUICK STATS */
+.quick-stats {
+    display: flex;
+    justify-content: center;
+    gap: 40px;
+    margin: 50px 0;
+}
+
+.stat-circle {
+    width: 160px;
+    height: 160px;
+    border-radius: 50%;
+    background: #0a2a66;
+    color: white;
+    text-align: center;
+    padding-top: 40px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+}
+
+.stat-circle h2 {
+    margin: 0;
+    font-size: 32px;
+}
+
+.stat-circle p {
+    margin-top: 8px;
+    font-size: 14px;
+}
+
+/* RANKINGS */
+.rankings {
+    text-align: center;
+    margin: 60px 0;
+}
+
+.ranking-cards {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 20px;
+}
+
+.ranking-card {
+    border: 2px solid #0a2a66;
+    padding: 20px 40px;
+    border-radius: 10px;
+    background: #f9f9f9;
+}
+
+/* SOCIAL LINKS */
+.social-links {
+    text-align: center;
+    margin: 40px 0;
+}
+
+.social-icon {
+    font-size: 28px;
+    margin: 0 15px;
+    color: #0a2a66;
+    text-decoration: none;
+}
+
+.social-icon:hover {
+    color: #ff6600;
+}
+
+/* ABOUT US PAGE */
+.about-section {
+    max-width: 1100px;
+    margin: 40px 60px;   /* small left & right indentation */
+    padding: 10px;
+    line-height: 1.6;
+}
+
+
+.about-section h2 {
+    color: #0a2a66;
+    margin-bottom: 15px;
+}
+
+.about-section h3 {
+    margin-top: 15px;
+    color: #333;
+}
+
+.about-section ul {
+    margin-left: 20px;
+}
+
+.director-section img {
+    width: 150px;
+    border-radius: 8px;
+    margin-right: 20px;
+}
+
+.director-content {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+/* ACADEMICS PAGE */
+.academics-section {
+    margin: 40px 60px;
+    line-height: 1.6;
+}
+
+.academics-section h2 {
+    color: #0a2a66;
+    margin-bottom: 15px;
+}
+
+.academics-section h3 {
+    margin-top: 20px;
+    color: #333;
+}
+
+.department-list {
+    list-style-type: lower-roman;
+    margin-left: 20px;
+}
+
+.academics-section ul {
+    margin-left: 30px;
+}
+
+/* BLUE LINKS */
+.academic-link {
+    color: #0066cc;
+    text-decoration: none;
+    font-weight: 500;
+}
+
+.academic-link:hover {
+    text-decoration: underline;
+}
+/* ADMISSIONS PAGE REFINEMENTS */
+.admissions-container {
+    margin: 40px 70px;
+    line-height: 1.5;
+}
+
+/* Section spacing */
+.admissions-section h2 {
+    margin-top: 35px;
+    margin-bottom: 10px;
+    color: #0a2a66;
+}
+
+/* Paragraph spacing */
+.admissions-section p {
+    margin-bottom: 10px;
+    color: #333;
+}
+
+/* List spacing */
+.admissions-section ul {
+    margin-left: 25px;
+    margin-bottom: 15px;
+}
+
+.admissions-section li {
+    margin-bottom: 6px;
+}
+
+/* Fee table */
+.fee-table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 15px;
+    margin-bottom: 25px;
+}
+
+.fee-table th,
+.fee-table td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: center;
+}
+
+.fee-table th {
+    background-color: #0a2a66;
+    color: white;
+}
+
+.fee-table tr:nth-child(even) {
+    background-color: #f9f9f9;
+}
+
+/* FAQ */
+.faq-list li {
+    margin-bottom: 12px;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+    .admissions-container {
+        margin: 30px;
+    }
+}
+/* CONTACT PAGE */
+.contact-container {
+    margin: 40px 70px;
+    line-height: 1.6;
+}
+
+.contact-section {
+    margin-bottom: 40px;
+}
+
+.contact-section h2 {
+    color: #0a2a66;
+    margin-bottom: 10px;
+}
+
+/* CONTACT TABLE */
+.contact-table {
+    width: 90%;
+    border-collapse: collapse;
+    margin-top: 15px;
+}
+
+.contact-table th,
+.contact-table td {
+    border: 1px solid #999;
+    padding: 10px;
+    text-align: left;
+}
+
+.contact-table th {
+    background-color: #0a2a66;
+    color: white;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .contact-container {
+        margin: 30px;
+    }
+}
+/* FACILITIES PAGE */
+.page-content {
+    margin: 40px 70px;
+}
+
+.page-title {
+    color: #0a2a66;
+    margin-bottom: 30px;
+}
+
+/* GRID */
+.facilities-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* exactly 2 per row */
+    gap: 30px;
+}
+
+/* CARD */
+.facility-card {
+    background-color: #f9f9f9;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    transition: transform 0.3s;
+}
+
+.facility-card:hover {
+    transform: translateY(-5px);
+}
+
+.facility-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+}
+
+.facility-card h3 {
+    margin: 15px;
+    color: #0a2a66;
+}
+
+.facility-card p {
+    margin: 0 15px 20px 15px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .page-content {
+        margin: 30px;
+    }
+}
+/* STUDENT LIFE PAGE */
+.studentlife-container {
+    margin: 40px 70px;
+}
+
+.page-title {
+    color: #0a2a66;
+    margin: 40px 0 20px;
+}
+
+/* CLUBS */
+.clubs-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.club-card {
+    background: #f9f9f9;
+    border-radius: 10px;
+    padding: 15px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+}
+
+.club-card img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.club-card h3 {
+    margin-top: 10px;
+    color: #0a2a66;
+}
+
+/* NSS & NCC */
+.service-section {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.service-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* FESTS */
+.fests-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+}
+
+.fest-card {
+    background: #f9f9f9;
+    padding: 15px;
+    border-radius: 10px;
+}
+
+.fest-card img {
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* GALLERY */
+.gallery-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 15px;
+}
+
+.gallery-grid img {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .clubs-grid,
+    .service-section,
+    .fests-grid,
+    .gallery-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .studentlife-container {
+        margin: 30px;
+    }
+}
+

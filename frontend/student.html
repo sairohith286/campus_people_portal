@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Dashboard</title>
+
+<style>
+body {
+    background:#e6f0ff;
+    font-family: Arial;
+}
+.card {
+    width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #333;
+    object-fit: cover;
+}
+h2 {
+    margin: 0;
+}
+p {
+    font-size: 16px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+    <div class="header">
+        <img id="photo">
+        <h2>Student Personal Details</h2>
+    </div>
+
+    <p><b>Name:</b> <span id="name"></span></p>
+    <p><b>Reg No:</b> <span id="regno"></span></p>
+    <p><b>Email:</b> <span id="email"></span></p>
+    <p><b>Mobile:</b> <span id="mobile"></span></p>
+    <p><b>Qualification:</b> <span id="qualification"></span></p>
+    <p><b>DOB:</b> <span id="dob"></span></p>
+    <p><b>Attendance %:</b> <span id="attendance"></span></p>
+</div>
+
+<script>
+const user = JSON.parse(sessionStorage.getItem("user"));
+
+document.getElementById("name").innerText = user.name;
+document.getElementById("regno").innerText = user.regNo;
+document.getElementById("email").innerText = user.email;
+document.getElementById("mobile").innerText = user.mobile;
+document.getElementById("qualification").innerText = user.highestQualification;
+document.getElementById("dob").innerText = user.dob;
+document.getElementById("attendance").innerText = user.attendancePercent;
+
+// PHOTO
+document.getElementById("photo").src = user.photo;
+</script>
+
+</body>
+</html>

@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<title>Login</title>
+
+<style>
+body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: rgb(194,196,235);
+}
+.formy {
+    border: 1px solid black;
+    border-radius: 20px;
+    width: 400px;
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 15px;
+    background-color: beige;
+}
+.form-row {
+    display: flex;
+    width: 70%;
+}
+.form-row label {
+    width: 110px;
+}
+.form-row input {
+    flex: 1;
+}
+</style>
+</head>
+
+<body>
+
+<form class="formy" onsubmit="login(event)">
+    <div class="form-row">
+        <label>User-Name:</label>
+        <input type="text" id="username" required>
+    </div>
+
+    <div class="form-row">
+        <label>Password:</label>
+        <input type="password" id="password" required>
+    </div>
+
+    <button type="submit">Submit</button>
+</form>
+
+<script>
+async function login(e){
+  e.preventDefault();
+
+  const id = document.getElementById("username").value;
+  const password = document.getElementById("password").value;
+
+  const res = await fetch("http://localhost:9095/api/login",{
+    method:"POST",
+    headers:{"Content-Type":"application/json"},
+    body:JSON.stringify({id,password})
+  });
+
+  const data = await res.json();
+
+  if(!data){
+    alert("Invalid credentials");
+    return;
+  }
+  sessionStorage.setItem("user", JSON.stringify(data));
+  if(data.regNo){
+    window.location.href = "student.html";
+  } else {
+    window.location.href = "teacher.html";
+  }
+}
+</script>
+
+
+</body>
+</html>

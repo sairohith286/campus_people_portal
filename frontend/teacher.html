@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Teacher Dashboard</title>
+
+<style>
+body {
+    background-color: rgb(183, 243, 207);
+    font-family: Arial;
+}
+.card {
+    width: 600px;
+    margin: 40px auto;
+    background: white;
+    padding: 20px;
+    border-radius: 12px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+.header {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.header img {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid #333;
+}
+h2 {
+    margin: 0;
+}
+p {
+    font-size: 16px;
+}
+</style>
+
+</head>
+<body>
+
+<div class="card">
+    <div class="header">
+        <img id="photo">
+        <h2>Teacher Personal Details</h2>
+    </div>
+
+    <p><b>Name:</b> <span id="name"></span></p>
+    <p><b>Employee No:</b> <span id="empno"></span></p>
+    <p><b>Email:</b> <span id="email"></span></p>
+    <p><b>Mobile:</b> <span id="mobile"></span></p>
+    <p><b>Qualification:</b> <span id="qualification"></span></p>
+    <p><b>DOB:</b> <span id="dob"></span></p>
+    <p><b>Attendance %:</b> <span id="attendance"></span></p>
+</div>
+
+<script>
+const user = JSON.parse(sessionStorage.getItem("user"));
+console.log(user);
+
+if (!user) {
+    alert("Session expired. Login again.");
+    window.location.href = "login.html";
+}
+
+// DISPLAY DATA
+document.getElementById("name").innerText = user.name;
+document.getElementById("empno").innerText = user.empNo;
+document.getElementById("email").innerText = user.email;
+document.getElementById("mobile").innerText = user.mobile;
+document.getElementById("qualification").innerText = user.highestQualification;
+document.getElementById("dob").innerText = user.dob;
+document.getElementById("attendance").innerText = user.attendancePercent;
+
+// PHOTO
+document.getElementById("photo").src = user.photo;
+</script>
+
+</body>
+</html>
