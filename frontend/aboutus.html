@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NITK Style Header</title>
+    <link rel="stylesheet" href="style1.css">
+    <style>
+      
+
+        .formy {
+            border: 1px solid black;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;   /* vertical center */
+            align-items: center;       /* horizontal center */
+            gap: 15px;
+            background-color: beige;
+            margin-top:20px;
+            margin-left: 400px;
+        }
+
+        .form-row {
+            display: flex;
+            align-items: center;
+            width: 70%;
+        }
+
+        .form-row label {
+            width: 110px;
+        }
+
+        .form-row input {
+            flex: 1;
+            padding: 5px;
+        }
+
+        button {
+            margin-top: 10px;
+            padding: 6px 15px;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Top Bar -->
+    <div class="topbar">
+    <div class="topbar-left"></div>
+
+    <div class="topbar-right">
+        <a class="support-btn" href="login.html">&gt; User-Login</a>
+    </div>
+</div>
+
+    <!-- Logo Section -->
+    <div class="logo-bar">
+        <img src="logo.png" alt="Institute Logo">
+        <div class="logo-text">
+            <h2>National Institute of Technology Karnataka, Surathkal</h2>
+            
+        </div>
+    </div>
+
+    <!-- Navigation -->
+    <header>
+        <header class="nav-wrapper">
+    <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="aboutus.html">About Us</a>
+        <a href="academics.html">Academics</a>
+        <a href="admissions.html">Admissions</a>
+        <a href="facilities.html">Facilities</a>
+        <a href="studentlife.html">Student Life</a>
+        <a class="active" href="contact.html">Contact Us</a>
+    </nav>
+    <hr>
+
+<div class="contact-container">
+
+    <!-- CONTACT OFFICE -->
+    <section class="contact-section">
+        <h2>Contact Office</h2>
+        <p>
+            Office of the Registrar<br>
+            National Institute of Technology Karnataka,<br>
+            Surathkal, Mangalore – 575025
+        </p>
+        <p>
+            <strong>Email:</strong> registrar@nitk.edu.in<br>
+            <strong>Phone:</strong> +91-824-2474000
+        </p>
+    </section>
+
+    <!-- ADDRESS & MAP -->
+    <section class="contact-section">
+        <h2>Address & Location</h2>
+        <p>
+            National Institute of Technology Karnataka<br>
+            Surathkal, Mangalore<br>
+            Karnataka – 575025
+        </p>
+
+        <iframe
+            src="https://www.google.com/maps?q=NITK%20Surathkal&output=embed"
+            width="90%"
+            height="300"
+            style="border:0;"
+            allowfullscreen=""
+            loading="lazy">
+        </iframe>
+    </section>
+
+    <!-- IMPORTANT CONTACTS TABLE -->
+    <section class="contact-section">
+        <h2>Important Contacts</h2>
+
+        <table class="contact-table">
+            <tr>
+                <th>Office</th>
+                <th>Email</th>
+                <th>Phone</th>
+            </tr>
+            <tr>
+                <td>Director Office</td>
+                <td>director@nitk.edu.in</td>
+                <td>+91-824-2474001</td>
+            </tr>
+            <tr>
+                <td>Admissions Office</td>
+                <td>admissions@nitk.edu.in</td>
+                <td>+91-824-2474002</td>
+            </tr>
+            <tr>
+                <td>Academic Section</td>
+                <td>academics@nitk.edu.in</td>
+                <td>+91-824-2474003</td>
+            </tr>
+            <tr>
+                <td>Hostel Office</td>
+                <td>hostel@nitk.edu.in</td>
+                <td>+91-824-2474004</td>
+            </tr>
+        </table>
+    </section>
+
+    
+    </section>
+
+</div>
+</body>
+</html>
